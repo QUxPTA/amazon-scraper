@@ -2,10 +2,14 @@
 import Express from 'express';
 import axios from 'axios';
 import { JSDOM } from 'jsdom';
+import cors from 'cors';
 
 // Initialize express
 const app = Express();
 const port = 3000;
+
+// Enable CORS for frontend access
+app.use(cors({ origin: 'http://localhost:5173' }));
 
 // Define the structure of a Product object
 interface Product {

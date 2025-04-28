@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Product Scraper</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Amazon Product Scraper</h1>
+      <div class="search-container">
+        <input
+          type="text"
+          id="_keyword"
+          placeholder="Enter search keyword..."
+          class="search-input"
+        />
+        <button onclick="scrapeProducts()" class="search-button">Search</button>
+      </div>
+      <p id="_error" class="error-message"></p>
+      <!-- Error message container -->
+      <div class="loading-container" id="_loading" style="display: none">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
+      </div>
+      <div class="results-container" id="_results">
+        <!-- Results will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>
